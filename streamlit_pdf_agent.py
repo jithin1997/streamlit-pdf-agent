@@ -1,6 +1,14 @@
 import os
 import tempfile
-import speech_recognition as sr
+import streamlit as st
+
+# UI setup
+st.title("Voice-Powered PDF Agent (Text Version)")
+user_question = st.text_input("Ask a question from the PDF")
+if st.button("Get Answer") and user_question:
+    answer = qa_chain.run(user_question)
+    st.write("### Answer:", answer)
+
 import streamlit as st
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyMuPDFLoader
