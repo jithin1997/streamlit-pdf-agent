@@ -4,4 +4,4 @@ langchain-community
 faiss-cpu
 huggingface-hub
 sentence-transformers
-
+pypdf
